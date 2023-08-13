@@ -6,12 +6,7 @@ body{
     background-color: #FFFFFF;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-html{
-    height: auto;
-}
-main{
-    height: auto;
-}
+
 /* header config */
 .header{
     height: 6vh;
@@ -59,14 +54,14 @@ main{
 /* menu mobile */
 #btn-mobile {
     display: none;
-    color: white;
+    color: rgb(0, 0, 0);
   }
 /* main config*/
 
 
 .search-bar{
     height: auto;
-    width: 100vw;
+    width: 90vw;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -80,7 +75,7 @@ main{
     width: 60vw;
     height: 43px;
     border-radius: 20px;
-    background-color: #bbbbbba8;
+    background-color: #e8e1e179;
     outline: 0px;
     border: none;
     margin: 30px;
@@ -90,7 +85,7 @@ main{
     color: black;
   }
   .search:hover {
-    background-color: #dfdede62;
+    background-color: #f0e6e662;
     cursor:text;
   }
   .search::placeholder {
@@ -208,19 +203,34 @@ main{
     float: left;
  }
  @media (max-width: 768px){
-.header ul{
-    display: none;
-}
-#nav.active #menu {
-    width: 50%;
+    #menu {
+        display: block;
+        position: absolute;
+        width: 0;
+        top: 0px;
+        right: 0px;
+        background: #ffffff;
+        transition: 0.6s;
+        z-index: 10;
+        height: 100vh;
+        visibility: hidden;
+        overflow-y: hidden;
+        margin: 0px;
+    }
+    #nav.active #menu {
+    width: 70%;
     visibility: visible;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow: hidden;
   }
-   #menu a {
+  
+  body.nav-active  {
+    overflow-y: hidden;
+    backdrop-filter: blur(500px);
+  }
+   #menu li{
      padding: 1rem 0;
-     margin: 0 1rem;
-     border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 2px;
    }
    #btn-mobile {
      display: flex;
@@ -235,6 +245,7 @@ main{
      border-top: 2px solid;
      width: 20px;
      overflow: hidden;
+     z-index: 100;
    }
    #hamburger::after,
    #hamburger::before {
@@ -247,6 +258,7 @@ main{
      transition: 0.3s;
      position: relative;
      overflow: hidden;
+     z-index: 100;
    }
    #nav.active #hamburger {
      border-top-color: transparent;
@@ -261,6 +273,7 @@ main{
      top: -7px;
      overflow: hidden;
    }
+   
 .resultadoPesquisa{
     color: black;
     font-size: 0.9em;
@@ -270,6 +283,9 @@ main{
     height: 18.9vh;
     width: 90vw;
     font-size: 0.9em;
+    margin: 0px;
+    margin-bottom: 0px;
+    margin-left: 15px;
 }
 .container-img-sobre{
     width: 200px; 
