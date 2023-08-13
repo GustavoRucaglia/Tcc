@@ -160,7 +160,7 @@ body{
     height: 35px;
     width: 35px;
     top: 10px;
-    left: 28.5%;
+    left: 28%;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -234,6 +234,7 @@ body{
    #menu li{
      padding: 1rem 0;
     margin-bottom: 2px;
+    width: 220px;
    }
    #btn-mobile {
      display: flex;
