@@ -1,3 +1,4 @@
+/*global config */
 *{
     margin:0px;
     padding: 0px;
@@ -10,7 +11,7 @@ body{
 /* header config */
 .header{
     height: 6vh;
-    border-bottom: 1.8px solid rgb(158, 158, 158);
+    border-bottom: 1.8px solid #e8e1e179;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -56,9 +57,8 @@ body{
     display: none;
     color: rgb(0, 0, 0);
   }
+
 /* main config*/
-
-
 .search-bar{
     height: auto;
     width: 90vw;
@@ -119,6 +119,7 @@ body{
 .text-amarelo{
     color: rgba(255, 204, 0,1);
 }
+/* Result of the search */
 .resultadoturistico{
     display: flex;
     flex-direction: column;
@@ -159,7 +160,7 @@ body{
     height: 35px;
     width: 35px;
     top: 10px;
-    left: 28%;
+    left: 28.5%;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -173,7 +174,7 @@ body{
     transform: scale(1.2);
 }
 .ponto-turistico:hover .title-sobre  {
-    text-decoration:underline 2px #ffee04;
+    text-decoration:underline 3px rgb(255, 238, 0);
 }
 
 
@@ -202,7 +203,9 @@ body{
  .container-bio{
     float: left;
  }
- @media (max-width: 768px){
+ 
+@media (max-width: 768px){
+    /* menu responsivo */
     #menu {
         display: block;
         position: absolute;
@@ -273,20 +276,20 @@ body{
      top: -7px;
      overflow: hidden;
    }
-   
-.resultadoPesquisa{
+
+/* layout responsivo */
+    .resultadoPesquisa{
     color: black;
     font-size: 0.9em;
     text-align: center;
-}
-.ponto-turistico{
+    }
+    .ponto-turistico{
     height: 18.9vh;
     width: 90vw;
     font-size: 0.9em;
     margin: 0px;
-    margin-bottom: 0px;
     margin-left: 15px;
-}
+    }
 .container-img-sobre{
     width: 200px; 
     height: 125px; 
@@ -295,9 +298,12 @@ body{
     width: 200px; 
     height: 125px; 
 }
+
 .icon-fav{
-    left: 32%;
+    left: 33%;
     top: 15px;
+    height: 25px;
+    width: 25px;
 }
 
 .ponto-sobre{
@@ -341,11 +347,11 @@ body{
         height: 45px;
     }
     .container-img-sobre{
-        width: 150px; 
+        width: 250px; 
         height: 120px; 
     }
     .ponto-imagem {
-        width: 150px; 
+        width: 250px; 
         height: 120px;
         overflow: hidden;
     }
@@ -354,16 +360,12 @@ body{
         width: 80vw;
         font-size: 0.9em;
     }
-    .linha{
-        width: 100vw;
-    }
     .input-buscar{
-        width: 18vh;
-        height: 35px;
+        display: none;
     }
     .icon-fav{
-        left: 25%;
-        top: 16px;
+        left: 40%;
+        top: 20px;
         border-radius: 20px;
     }
     .ponto-sobre{
@@ -383,6 +385,7 @@ body{
         width: 80vw;
         justify-content: start;
     }
+   
     .search{
         height: auto;
         width: 250px;
@@ -392,7 +395,7 @@ body{
         display: none;
     }
     .icon-fav{
-        left: 30%;
+        left: 45%;
         top: 20px;
         border-radius: 20px;
     }
